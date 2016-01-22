@@ -9,6 +9,8 @@
 #include "y.tab.h"
 //extern YYSTYPE  yylineno;
 extern char *yytext;
+//extern int yylex();
+void yyerror(char *);
 %}
 %x minus
 %%

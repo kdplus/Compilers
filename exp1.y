@@ -9,23 +9,37 @@
 #include <stdio.h>
 #include <string.h>
 #include "node.h"
+#include "codegen.h"
+class CGContext;
 extern int yylineno;
 long long dep = 0;
 extern char *yytext;
+extern Node* Groot;
+extern int yyparse();
+extern int yylex();
+void createCoreFunctions(CGContext& context);
 
 void yyerror(char *str){
         fprintf(stderr, "%d : %s %s\n", yylineno, str, yytext);
 }
 
 int yywrap(){
-        return 1;
+	return 1;
 }
 
 main(){
         yyparse();
 	printf("Abstract Syntax Tree: \n");
 	print_ast(Groot, 0);	
+	//LLVMInitializeNativeTarget();
+	//InitializeNativeTargetAsmPrinter();
+	//InitializeNativeTargetAsmParser();
+	CGContext context;
+//	createCoreFunctions(context);
+	context.genCode(Groot);
+//	context.runCode();
 }
+
 
 %}
 

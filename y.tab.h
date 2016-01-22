@@ -100,7 +100,7 @@ extern int yydebug;
 typedef union YYSTYPE YYSTYPE;
 union YYSTYPE
 {
-#line 32 "exp1.y" /* yacc.c:1909  */
+#line 46 "exp1.y" /* yacc.c:1909  */
 
 	struct Node *node;
 	char *string;

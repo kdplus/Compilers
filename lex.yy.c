@@ -531,8 +531,10 @@ char *yytext;
 #include "y.tab.h"
 //extern YYSTYPE  yylineno;
 extern char *yytext;
+//extern int yylex();
+void yyerror(char *);
 
-#line 536 "lex.yy.c"
+#line 538 "lex.yy.c"
 
 #define INITIAL 0
 #define minus 1
@@ -720,9 +722,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 14 "exp1.l"
+#line 16 "exp1.l"
 
-#line 726 "lex.yy.c"
+#line 728 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -807,281 +809,281 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 15 "exp1.l"
+#line 17 "exp1.l"
 ;
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 16 "exp1.l"
+#line 18 "exp1.l"
 {yylineno++;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 17 "exp1.l"
+#line 19 "exp1.l"
 {yylval.string = strdup(yytext); return INT;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 18 "exp1.l"
+#line 20 "exp1.l"
 {yylval.string = strdup(yytext); return LP;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 19 "exp1.l"
+#line 21 "exp1.l"
 {yylval.string = strdup(yytext); return RP;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 20 "exp1.l"
+#line 22 "exp1.l"
 {yylval.string = strdup(yytext); return LB;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 21 "exp1.l"
+#line 23 "exp1.l"
 {yylval.string = strdup(yytext); return RB;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 22 "exp1.l"
+#line 24 "exp1.l"
 {yylval.string = strdup(yytext); return LC;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 23 "exp1.l"
+#line 25 "exp1.l"
 {yylval.string = strdup(yytext); return RC;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 24 "exp1.l"
+#line 26 "exp1.l"
 {yylval.string = strdup(yytext); return TYPE;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 25 "exp1.l"
+#line 27 "exp1.l"
 {yylval.string = strdup(yytext); return STRUCT;}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 26 "exp1.l"
+#line 28 "exp1.l"
 {yylval.string = strdup(yytext); return RETURN;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 27 "exp1.l"
+#line 29 "exp1.l"
 {yylval.string = strdup(yytext); return IF;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 28 "exp1.l"
+#line 30 "exp1.l"
 {yylval.string = strdup(yytext); return ELSE;}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 29 "exp1.l"
+#line 31 "exp1.l"
 {yylval.string = strdup(yytext); return BREAK;}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 30 "exp1.l"
+#line 32 "exp1.l"
 {yylval.string = strdup(yytext); return CONT;}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 31 "exp1.l"
+#line 33 "exp1.l"
 {yylval.string = strdup(yytext); return FOR;}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 32 "exp1.l"
+#line 34 "exp1.l"
 {yylval.string = strdup(yytext); return SEMI;}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 33 "exp1.l"
+#line 35 "exp1.l"
 {yylval.string = strdup(yytext); return COMMA;}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 34 "exp1.l"
+#line 36 "exp1.l"
 {yylval.string = strdup(yytext); return DOT;}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 35 "exp1.l"
+#line 37 "exp1.l"
 {yylval.string = strdup(yytext); return ASSIGNOP;}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 36 "exp1.l"
+#line 38 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 37 "exp1.l"
+#line 39 "exp1.l"
 {yylval.string = strdup(yytext); return UNARYOP;}
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 38 "exp1.l"
+#line 40 "exp1.l"
 {yylval.string = strdup(yytext); return UNARYOP;}
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 39 "exp1.l"
+#line 41 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 40 "exp1.l"
+#line 42 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 41 "exp1.l"
+#line 43 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 42 "exp1.l"
+#line 44 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 43 "exp1.l"
+#line 45 "exp1.l"
 {yylval.string = strdup(yytext); return UNBINARYOP;}
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 44 "exp1.l"
+#line 46 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 45 "exp1.l"
+#line 47 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 46 "exp1.l"
+#line 48 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 47 "exp1.l"
+#line 49 "exp1.l"
 {yylval.string = strdup(yytext); return UNARYOP;}
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 48 "exp1.l"
+#line 50 "exp1.l"
 {yylval.string = strdup(yytext); return UNARYOP;}
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 49 "exp1.l"
+#line 51 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 50 "exp1.l"
+#line 52 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 51 "exp1.l"
+#line 53 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 52 "exp1.l"
+#line 54 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 53 "exp1.l"
+#line 55 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 54 "exp1.l"
+#line 56 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 55 "exp1.l"
+#line 57 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 56 "exp1.l"
+#line 58 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 57 "exp1.l"
+#line 59 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 58 "exp1.l"
+#line 60 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 59 "exp1.l"
+#line 61 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
-#line 60 "exp1.l"
+#line 62 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
-#line 61 "exp1.l"
+#line 63 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
-#line 62 "exp1.l"
+#line 64 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
-#line 63 "exp1.l"
+#line 65 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 50:
 YY_RULE_SETUP
-#line 64 "exp1.l"
+#line 66 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 51:
 YY_RULE_SETUP
-#line 65 "exp1.l"
+#line 67 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 52:
 YY_RULE_SETUP
-#line 66 "exp1.l"
+#line 68 "exp1.l"
 {yylval.string = strdup(yytext); return BINARYOP;}
 	YY_BREAK
 case 53:
 YY_RULE_SETUP
-#line 67 "exp1.l"
+#line 69 "exp1.l"
 {yylval.string = strdup(yytext); return ID;}
 	YY_BREAK
 case 54:
 YY_RULE_SETUP
-#line 68 "exp1.l"
+#line 70 "exp1.l"
 {yyerror("Error!");}
 	YY_BREAK
 case 55:
 YY_RULE_SETUP
-#line 69 "exp1.l"
+#line 71 "exp1.l"
 ECHO;
 	YY_BREAK
-#line 1085 "lex.yy.c"
+#line 1087 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 case YY_STATE_EOF(minus):
 	yyterminate();
@@ -2080,7 +2082,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 69 "exp1.l"
+#line 71 "exp1.l"
 
 
 
