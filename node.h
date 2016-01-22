@@ -28,19 +28,21 @@ llvm::Value* extvarsCg(Node* now, CGContext& context);
 //llvm::Value* funcCg(Node* now, CGContext& context);
 //llvm::Value* parasCg(Node* now, CGContext& context);
 llvm::Value* stmtblockCg(Node* now, CGContext& context);
-//llvm::Value* stmtsCg(Node* now, CGContext& context);
-//llvm::Value* stmtCg(Node* now, CGContext& context);
+llvm::Value* stmtsCg(Node* now, CGContext& context);
+llvm::Value* stmtCg(Node* now, CGContext& context);
 //llvm::Value* estmtCg(Node* now, CGContext& context);
 //llvm::Value* defsCg(Node* now, CGContext& context);
 //llvm::Value* defCg(Node* now, CGContext& context);
 //llvm::Value* decsCg(Node* now, CGContext& context);
 //llvm::Value* decCg(Node* now, CGContext& context);
 //llvm::Value* initCg(Node* now, CGContext& context);
-//llvm::Value* exp(Node* now, CGContext& context);
+llvm::Value* expCg(Node* now, CGContext& context);
 //llvm::Value* extexp(Node* now, CGContext& context);
 //llvm::Value* arrs(Node* now, CGContext& context);
 llvm::Value* VarDecCg(char* varType, Node* now, CGContext& context);
 llvm::Value* FunDecCg(Node* now, CGContext& context);
+llvm::Value* ReturnCg(Node* now, CGContext& context);
+
 
 typedef struct Node{
 	char *type;
@@ -59,15 +61,15 @@ typedef struct Node{
 		//else if(strcmp(type, "FUNC") == 0) return funcCg(this, context);
 		//else if(strcmp(type, "PARAS") == 0) return parasCg(this, context);
 		else if(strcmp(type, "STMTBLOCK") == 0) return stmtblockCg(this, context);
-		//else if(strcmp(type, "STMTS") == 0) return stmtsCg(this, context);
-		//else if(strcmp(type, "STMT") == 0) return stmtCg(this, context);
+		else if(strcmp(type, "STMTS") == 0) return stmtsCg(this, context);
+		else if(strcmp(type, "STMT") == 0) return stmtCg(this, context);
 		//else if(strcmp(type, "ESTMT") == 0) return estmtCg(this, context);
 		//else if(strcmp(type, "DEFS") == 0) return defsCg(this, context);
 		//else if(strcmp(type, "DEF") == 0) return defCg(this, context);
 		//else if(strcmp(type, "DECS") == 0) return decsCg(this, context);
 		//else if(strcmp(type, "DEC") == 0) return decCg(this, context);
 		//else if(strcmp(type, "INIT") == 0) return initCg(this, context);
-		//else if(strcmp(type, "EXP") == 0) return exp(this, context);
+		else if(strcmp(type, "EXP") == 0) return expCg(this, context);
 		//else if(strcmp(type, "EXTEXP") == 0) return extexp(this, context);
 		//else if(strcmp(type, "ARRS") == 0) return arrs(this, context);
 	}
